@@ -1,0 +1,217 @@
+{
+    "emails": [
+        {
+            "line": 3,
+            "masked_value": "s***m@alueducation.com",
+            "category": "ALU Official",
+            "is_valid": true,
+            "is_safe": true
+        },
+        {
+            "line": 4,
+            "masked_value": "s***n@si.alueducation.com",
+            "category": "ALU SI",
+            "is_valid": true,
+            "is_safe": true
+        },
+        {
+            "line": 4,
+            "masked_value": "a***e@alumni.alueducation.com",
+            "category": "ALU Alumni",
+            "is_valid": true,
+            "is_safe": true
+        },
+        {
+            "line": 5,
+            "masked_value": "a***k@gmail.com",
+            "category": "General",
+            "is_valid": true,
+            "is_safe": true
+        },
+        {
+            "line": 5,
+            "masked_value": "s***t@externalvendor.co.uk",
+            "category": "General",
+            "is_valid": true,
+            "is_safe": true
+        },
+        {
+            "line": 11,
+            "masked_value": "b***y@alumni.alueducation.com",
+            "category": "ALU Alumni",
+            "is_valid": true,
+            "is_safe": true
+        },
+        {
+            "line": 41,
+            "masked_value": "***@example.com",
+            "category": "General",
+            "is_valid": true,
+            "is_safe": false
+        },
+        {
+            "line": 52,
+            "masked_value": "***@domain.com",
+            "category": "General",
+            "is_valid": true,
+            "is_safe": true
+        },
+        {
+            "line": 53,
+            "masked_value": "v***s@alueducation.com",
+            "category": "ALU Official",
+            "is_valid": false,
+            "is_safe": true
+        }
+    ],
+    "credit_cards": [
+        {
+            "line": 8,
+            "masked_value": "****-****-****-1111",
+            "is_valid": true,
+            "is_safe": true
+        },
+        {
+            "line": 10,
+            "masked_value": "****-****-****-5100",
+            "is_valid": true,
+            "is_safe": true
+        },
+        {
+            "line": 14,
+            "masked_value": "****-****-****-1112",
+            "is_valid": false,
+            "is_safe": true
+        },
+        {
+            "line": 15,
+            "masked_value": "****-****-****-5101",
+            "is_valid": false,
+            "is_safe": true
+        },
+        {
+            "line": 16,
+            "masked_value": "****-****-****-4567",
+            "is_valid": false,
+            "is_safe": true
+        },
+        {
+            "line": 44,
+            "masked_value": "****-****-****-1111",
+            "is_valid": true,
+            "is_safe": false
+        }
+    ],
+    "urls": [
+        {
+            "line": 29,
+            "value": "https://www.alueducation.com/students",
+            "is_valid": true,
+            "is_safe": true
+        },
+        {
+            "line": 30,
+            "value": "http://si.alueducation.com/portal/home?user=123",
+            "is_valid": true,
+            "is_safe": true
+        },
+        {
+            "line": 31,
+            "value": "https://github.com/terancebana/alu-regex-data-extraction",
+            "is_valid": true,
+            "is_safe": true
+        },
+        {
+            "line": 39,
+            "value": "[REDACTED]",
+            "is_valid": true,
+            "is_safe": false
+        },
+        {
+            "line": 43,
+            "value": "[REDACTED]",
+            "is_valid": true,
+            "is_safe": false
+        }
+    ],
+    "phone_numbers": [
+        {
+            "line": 8,
+            "value": "4111-1111-1111-1111",
+            "is_valid": false,
+            "is_safe": true
+        },
+        {
+            "line": 9,
+            "value": "+250 788 123 456",
+            "is_valid": true,
+            "is_safe": true
+        },
+        {
+            "line": 10,
+            "value": "5105 1051 0510 5100",
+            "is_valid": false,
+            "is_safe": true
+        },
+        {
+            "line": 11,
+            "value": "+230-5499-1234",
+            "is_valid": true,
+            "is_safe": true
+        },
+        {
+            "line": 14,
+            "value": "4111-1111-1111-1112",
+            "is_valid": false,
+            "is_safe": true
+        },
+        {
+            "line": 15,
+            "value": "5105-1051-0510-5101",
+            "is_valid": false,
+            "is_safe": true
+        },
+        {
+            "line": 16,
+            "value": "3456-789012-3456",
+            "is_valid": true,
+            "is_safe": true
+        },
+        {
+            "line": 20,
+            "value": "+1 (555) 019-2834",
+            "is_valid": true,
+            "is_safe": true
+        },
+        {
+            "line": 22,
+            "value": "788123456",
+            "is_valid": true,
+            "is_safe": true
+        },
+        {
+            "line": 25,
+            "value": "1234567890123456",
+            "is_valid": false,
+            "is_safe": true
+        },
+        {
+            "line": 44,
+            "value": "4111-1111-1111-1111",
+            "is_valid": false,
+            "is_safe": false
+        },
+        {
+            "line": 63,
+            "value": "9999999999999999",
+            "is_valid": false,
+            "is_safe": true
+        },
+        {
+            "line": 63,
+            "value": "9999999999999999",
+            "is_valid": false,
+            "is_safe": true
+        }
+    ]
+}

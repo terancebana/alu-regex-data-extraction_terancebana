@@ -1,0 +1,66 @@
+[SYSTEM LOG - 2026-05-23 10:15:32]
+Initialization completed. Starting system log extraction process.
+Author of this request: support.team@alueducation.com (ALU Staff).
+Please escalate critical issues to senior-dean@si.alueducation.com or admin.office@alumni.alueducation.com.
+If they are unreachable, contact external support at alu-helpdesk@gmail.com or support@externalvendor.co.uk.
+
+--- TRANSACTION REPORT ---
+User Alice processed a payment of USD 150.00 using Visa card 4111-1111-1111-1111.
+Wait, let's verify if that transaction went through. Her phone is +250 788 123 456.
+User Bob attempted a payment of $1,250.50 using MasterCard 5105 1051 0510 5100.
+His backup phone is +230-5499-1234. He can be reached at bob.marley@alumni.alueducation.com.
+
+Invalid card check:
+User Charlie tried card 4111-1111-1111-1112 (Luhn invalid, should be rejected) with amount EUR 99.99.
+Another card tried: 5105-1051-0510-5101 (Luhn invalid, MasterCard) with amount £5.50.
+Let's see if our system also catches 3456-789012-34567 which is a valid American Express card.
+
+--- COMMUNICATION DETAILS ---
+Contact numbers in the database:
+- Primary Office: +1 (555) 019-2834
+- Secondary Office: (250) 788-987-654
+- Regional Contact: 0788123456
+- Bad phone: +250-abc-def-ghi (Should be rejected)
+- Bad phone 2: 123 (Too short, should be rejected)
+- Bad phone 3: 12345678901234567890 (Too long, E.164 limits to 15 digits)
+
+--- WEBSITE REVIEWS ---
+Please visit our portals:
+- Student Portal: https://www.alueducation.com/students
+- Innovation Center: http://si.alueducation.com/portal/home?user=123
+- Github repo: https://github.com/terancebana/alu-regex-data-extraction
+- Bad URL 1: http://
+- Bad URL 2: https://.com
+- Bad URL 3: htt://google.com
+
+--- SECURITY THREAT LOGS ---
+Warning: External system attempted to inject scripts through forms:
+XSS Attack 1: User tried email: "<script>alert('xss')</script>"@example.com
+XSS Attack 2: User tried url: https://example.com/search?q=<script>alert('xss')</script>
+XSS Attack 3: User tried URL protocol: javascript:alert(1)
+SQLi Attack 1: User tried email: 'OR'1'='1@example.com
+SQLi Attack 2: User tried email: john;DROP TABLE Users;@example.com
+SQLi Attack 3: User tried URL: https://example.com/profile?id=5' UNION SELECT null, username, password FROM users--
+SQLi Attack 4: User tried card: 4111-1111-1111-1111; DROP TABLE Transactions; (Card is valid, but payload is malicious and should be handled!)
+SQLi Attack 5: User tried amount: $100; SELECT * FROM users;
+
+--- MALFORMED DATA ---
+Malformed emails:
+- invalid-email@
+- @domain.com
+- double@@domain.com
+- spaces in@domain.com
+- verylonglocalpartemailaddresscomposedofmanycharsmorethan64characters@alueducation.com (local part is 76 chars, exceeds 64 limit!)
+
+We have currencies:
+- RWF 45,000
+- EUR 99.99
+- ¥500
+- Malformed currency 1: USD
+- Malformed currency 2: $
+- Malformed currency 3: RWF -500 (negative not allowed)
+- Malformed currency 4: $123.456 (too many decimals)
+- Overflow currency: RWF 99999999999999999999999999999999999.99
+
+System shutdown schedule: 22:30. Start backup: 03:00.
+EOF
