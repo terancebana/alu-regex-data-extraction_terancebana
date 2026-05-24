@@ -1,21 +1,23 @@
 ALU Regex Data Extraction Project
 
-This project uses Python and regex to extract useful information from messy text files.
+A robust, Python-based utility designed to parse, extract, validate, and sanitize sensitive information from unstructured, messy text files using advanced Regular Expressions (Regex).
 
-The program can find:
+This tool is specifically designed to safely handle data by identifying key entities, validating financial identifiers, masking sensitive details, and detecting potential web application security threats such as SQL Injection (SQLi) and Cross-Site Scripting (XSS).
 
-Emails
-Credit card numbers
-URLs
-Phone numbers
+Features
 
-It also:
+Regex-Based Extraction: Efficiently scans raw text to identify emails, credit cards, URLs, and phone numbers.
 
-Checks if credit cards are valid
-Masks sensitive information
-Detects unsafe text like SQL injection or XSS
-Saves results into a JSON file
+Sensitive Data Masking: Automatically masks critical information (e.g., credit cards and emails) to preserve user privacy and maintain security compliance.
+
+Credit Card Validation: Integrates the Luhn Algorithm (modulo 10 checksum) to verify the mathematical validity of extracted credit card numbers.
+
+Security Threat Detection: Analyzes input strings to identify potentially malicious payloads, including SQL Injection and XSS vectors.
+
+Structured JSON Output: Exports all parsed, validated, and classified data into a clean, structured JSON format for downstream processing or security auditing.
+
 Project Structure
+
 project/
 ├── input/
 │ └── raw-text.txt
@@ -24,34 +26,51 @@ project/
 ├── src/
 │ └── main.py
 └── README.md
-How to Run
 
-Open the project folder and run:
+Regex Patterns Used
+
+The application relies on highly optimized regular expressions to match target data types:
+
+Data Type
+
+Regular Expression Pattern
+
+Emails
+
+[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}
+
+Credit Cards
+
+(?:\d[ -]?){13,19}
+
+URLs
+
+https?://\S+
+
+Phone Numbers
+
+\+?\d[\d\s.-]{7,15}
+
+Installation & Usage
+
+Prerequisites
+
+Python 3.x
+
+Running the Application
+
+Ensure your messy source text is saved in input/raw-text.txt.
+
+Open your terminal, navigate to the project directory, and execute the main script:
 
 python3 src/main.py
 
-The program will:
+The program will read the raw text, execute the extraction pipeline, perform validation/sanitization checks, and export the findings directly to output/output.json.
 
-Read the text file
-Extract data
-Validate information
-Save results into a JSON file
-Regex Patterns Used
-Emails
-[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}
-Credit Cards
-(?:\d[ -]?){13,19}
-URLs
-https?://\S+
-Phone Numbers
-\+?\d[\d\s.-]{7,15}
-Features
-Extracts data using regex
-Masks emails and credit cards
-Uses the Luhn algorithm for card validation
-Detects unsafe input
-Generates JSON output
 Example Output
+
+The resulting output.json presents parsed data with corresponding line tracking, masked values, and safety indicators:
+
 {
 "emails": [
 {
@@ -61,7 +80,11 @@ Example Output
 }
 ]
 }
+
 Technologies Used
-Python
-Regex
-JSON
+
+Language: Python 3
+
+Libraries: - re
+
+json
